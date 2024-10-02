@@ -1,0 +1,26 @@
+{
+  "name": "cse-341-project01-test",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickandreww/cse-341-project01-test.git"
+  },
+  "author": "Erick Moura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickandreww/cse-341-project01-test/issues"
+  },
+  "homepage": "https://github.com/erickandreww/cse-341-project01-test#readme",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
