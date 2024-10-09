@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/erickandreww/cse-341-project01-test#readme",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "mongoose": "^8.7.0"
   },

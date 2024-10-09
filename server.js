@@ -1,10 +1,21 @@
 const express = require('express');
-const bodyParser = require("body-parser");
-const route = require('./routes/')
+const bodyParser = require('body-parser');
+const mongodb = require('./data/database');
 const app = express();
 
-const Port = process.env.Port || 8080;
+const route = require('./routes/');
+const contactsRoute = require('./routes/contacts');
 
 app.use('/', route);
+app.use('/contacts', contactsRoute);
 
-app.listen(Port, ()=> console.log('Server Started'));
+const Port = process.env.Port || 3000;
+
+mongodb.intDb((err) => {
+    if(err) {
+        console.log(err)
+    }
+    else {
+        app.listen(Port, ()=> {console.log(`Database is listening and node Runing on Port ${Port}`)});
+    }
+})
