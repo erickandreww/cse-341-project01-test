@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
 const app = express();
 
@@ -11,7 +11,7 @@ app.use('/contacts', contactsRoute);
 
 const Port = process.env.Port || 3000;
 
-mongodb.intDb((err) => {
+mongodb.initDb((err) => {
     if(err) {
         console.log(err)
     }
