@@ -1,13 +1,21 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
 const app = express();
 
 const route = require('./routes/');
-const contactsRoute = require('./routes/contacts');
+app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+        'Access-Control-Allow-Headers', 
+        'Origin, X-Resquested-With, Content-Type, Accept, Z-Key'
+    ); 
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+})
 
 app.use('/', route);
-app.use('/contacts', contactsRoute);
 
 const Port = process.env.Port || 3000;
 

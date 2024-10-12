@@ -1,0 +1,159 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Contacts Api",
+    "descrioption": "Contacts Api",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "host": "https://cse-341-project01-test.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/contacts/": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/contacts/{id}": {
+      "get": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "favoriteColor": {
+                  "example": "any"
+                },
+                "birthday": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Contacts"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
